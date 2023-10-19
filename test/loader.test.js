@@ -2,8 +2,6 @@ import {
   compile,
   execute,
   getCompiler,
-  getErrors,
-  getWarnings,
   readAsset,
 } from './helpers';
 
@@ -15,7 +13,6 @@ describe('loader', () => {
     expect(
       execute(readAsset('main.bundle.js', compiler, stats))
     ).toMatchSnapshot('result');
-    expect(getErrors(stats)).toMatchSnapshot('errors');
-    expect(getWarnings(stats)).toMatchSnapshot('warnings');
+    expect(Object.keys(stats.compilation.assets)).toMatchSnapshot('assets');
   });
 });

@@ -40,10 +40,12 @@
     "index.js"
   ],
   "peerDependencies": {
+    "file-loader": "*",
     "webpack": "^4.0.0 || ^5.0.0"
   },
   "dependencies": {
     "loader-utils": "^3.2.1",
+    "mime": "^3.0.0",
     "schema-utils": "^4.2.0"
   },
   "devDependencies": {
@@ -62,6 +64,7 @@
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",
+    "file-loader": "^6.2.0",
     "husky": "^8.0.3",
     "jest": "^29.7.0",
     "jest-junit": "^16.0.0",

@@ -13,11 +13,12 @@ export default (fixture, loaderOptions = {}, config = {}) => {
       path: path.resolve(__dirname, '../outputs'),
       filename: '[name].bundle.js',
       chunkFilename: '[name].chunk.js',
+      publicPath: ''
     },
     module: {
       rules: [
         {
-          test: /\.js$/i,
+          test: /\.(gif|jpg|png|svg)$/i,
           rules: [
             {
               loader: path.resolve(__dirname, '../../src'),

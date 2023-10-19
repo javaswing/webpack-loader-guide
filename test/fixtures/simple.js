@@ -1,5 +1,3 @@
-import foo from './foo';
+import png from './file.png'
 
-__export__ = foo;
-
-export default foo;
+export default png;

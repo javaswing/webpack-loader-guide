@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loader should work: assets 1`] = `
+[
+  "b6b33f1d72a9ab7505492869460d212f.png",
+  "main.bundle.js",
+]
+`;
+
+exports[`loader should work: result 1`] = `undefined`;
