@@ -16,7 +16,10 @@ export default function loader(source) {
 
   const options = this.getOptions();
 
-  validateOptions(schema, options, 'Loader');
+  validateOptions(schema, options, {
+    name: 'url Loader',
+    baseDataPath: 'options'
+  });
 
   const file = this.resourcePath;
 
@@ -31,6 +34,7 @@ export default function loader(source) {
   const mimetype = options.mimetype || mime.getType(file);
 
   if (limit && source.length < limitSize) {
+
     if (typeof source === 'string') {
       // eslint-disable-next-line no-param-reassign
       source = Buffer.from(source);

@@ -12,8 +12,7 @@ function removeCWD(str) {
   return str.replace(new RegExp(cwd, 'g'), '');
 }
 
-export default (errors) => {
-  return errors.map((error) =>
+export default (errors) => errors.map((error) =>
     removeCWD(
       error
         .toString()
@@ -22,4 +21,3 @@ export default (errors) => {
         .join('\n')
     )
   );
-};

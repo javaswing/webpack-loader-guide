@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
-  "repository": "null/webpack-loader-guide",
+  "repository": "webpack-loader-guide",
   "author": "javaswing",
   "homepage": "https://github.com/null/webpack-loader-guide",
   "bugs": "https://github.com/null/webpack-loader-guide/issues",

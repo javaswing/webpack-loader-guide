@@ -1,5 +1,3 @@
-import { getCompiler, compile } from './helpers';
-
 describe('validate options', () => {
   const tests = {
     name: {
