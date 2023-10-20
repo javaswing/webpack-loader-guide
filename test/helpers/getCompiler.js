@@ -13,13 +13,13 @@ export default (fixture, loaderOptions = {}, config = {}) => {
       path: path.resolve(__dirname, '../outputs'),
       filename: '[name].bundle.js',
       chunkFilename: '[name].chunk.js',
+      library: "___TEST___",
       publicPath: '',
-      libraryTarget: 'commonjs2',
     },
     module: {
       rules: [
         {
-          test: /\.(gif|jpg|png|svg)$/i,
+          test:  /\.txt$/,
           rules: [
             {
               loader: path.resolve(__dirname, '../../src'),

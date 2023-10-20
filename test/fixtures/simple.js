@@ -1,3 +1,3 @@
-import png from './file.png'
+import Data from './example.txt'
 
-export default png;
+export default Data;

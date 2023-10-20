@@ -1,37 +1,21 @@
 import {
   compile,
-  execute,
   getCompiler,
+  execute,
   readAsset,
-  normalizeErrors
+  getWarnings,
+  getErrors
 } from './helpers';
 
 describe('loader', () => {
   it('should work', async () => {
-    const compiler = getCompiler('simple.js');
+    const compiler = getCompiler('example.txt', { name: 'javaswing' });
     const stats = await compile(compiler);
 
     expect(
-      execute(readAsset('main.bundle.js', compiler, stats))
-    ).toMatchSnapshot('result');
-    expect(Object.keys(stats.compilation.assets)).toMatchSnapshot('assets');
-    expect(normalizeErrors(stats.compilation.warnings)).toMatchSnapshot(
-      'warnings'
-    );
-    expect(normalizeErrors(stats.compilation.errors)).toMatchSnapshot('errors');
-  });
-
-  it('with limit', async () => {
-    const compiler = getCompiler('simple.js', {limit: true, limitSize: 100000});
-    const stats = await compile(compiler);
-
-    expect(
-      execute(readAsset('main.bundle.js', compiler, stats))
-    ).toMatchSnapshot('result');
-    expect(Object.keys(stats.compilation.assets)).toMatchSnapshot('assets');
-    expect(normalizeErrors(stats.compilation.warnings)).toMatchSnapshot(
-      'warnings'
-    );
-    expect(normalizeErrors(stats.compilation.errors)).toMatchSnapshot('errors');
+      execute(readAsset("main.bundle.js", compiler, stats))
+    ).toMatchSnapshot("result");
+    expect(getWarnings(stats)).toMatchSnapshot("warnings");
+    expect(getErrors(stats)).toMatchSnapshot("errors");
   });
 });
