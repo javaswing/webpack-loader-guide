@@ -3,6 +3,15 @@
   "properties": {
     "name": {
       "type": "boolean"
+    },
+    "limit": {
+      "type": "boolean"
+    },
+    "limitSize": {
+      "type": ["number"]
+    },
+    "mimetype": {
+      "type": "string"
     }
   },
   "additionalProperties": false
