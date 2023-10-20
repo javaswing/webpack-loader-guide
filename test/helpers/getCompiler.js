@@ -14,7 +14,7 @@ export default (fixture, loaderOptions = {}, config = {}) => {
       filename: '[name].bundle.js',
       chunkFilename: '[name].chunk.js',
       publicPath: '',
-      libraryTarget: 'commonjs2',
+      library: "___TEST___",
     },
     module: {
       rules: [
