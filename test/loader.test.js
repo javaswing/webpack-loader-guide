@@ -21,7 +21,7 @@ describe('loader', () => {
     expect(normalizeErrors(stats.compilation.errors)).toMatchSnapshot('errors');
   });
 
-  it('with limit', async () => {
+  it('with limit and limitSize', async () => {
     const compiler = getCompiler('simple.js', {limit: true, limitSize: 100000});
     const stats = await compile(compiler);
 
